@@ -9,6 +9,7 @@ EMAIL=$(jq --raw-output ".email" $CONFIG_PATH)
 DOMAINS=$(jq --raw-output ".domains[]" $CONFIG_PATH)
 KEYFILE=$(jq --raw-output ".keyfile" $CONFIG_PATH)
 CERTFILE=$(jq --raw-output ".certfile" $CONFIG_PATH)
+GCLOUDKEYILE=$(jq --raw-output ".gcloudkeyfile" $CONFIG_PATH)
 
 mkdir -p "$CERT_DIR"
 
@@ -20,11 +21,11 @@ if [ ! -d "$CERT_DIR/live" ]; then
     done
 
     echo "$DOMAINS" > /data/domains.gen
-    certbot certonly --non-interactive --standalone --email "$EMAIL" --agree-tos --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --preferred-challenges "http" "${DOMAIN_ARR[@]}"
+    certbot certonly --non-interactive --standalone --email "$EMAIL" --agree-tos --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --dns-google --dns-google-credentials "$GCLOUDKEYFILE" "${DOMAIN_ARR[@]}"
 
 # Renew certs
 else
-    certbot renew --non-interactive --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --preferred-challenges "http"
+    certbot renew --non-interactive --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --dns-google --dns-google-credentials "$GCLOUDKEYFILE"
 fi
 
 # copy certs to store
