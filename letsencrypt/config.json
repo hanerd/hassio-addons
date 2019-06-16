@@ -7,7 +7,7 @@
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
   "boot": "manual",
-  "map": ["ssl:rw", "share"],
+  "map": ["ssl:rw","share"],
   "options": {
     "email": null,
     "domains": [null],
@@ -22,5 +22,5 @@
     "keyfile": "str",
     "gcloudkeyfile": "str"
   },
-  "image": "hanerd/hassio-lets-encrypt:1"
+  "image": "hanerd/{arch}-addon-letsencrypt"
 }
