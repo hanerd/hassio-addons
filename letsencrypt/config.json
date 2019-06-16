@@ -22,5 +22,5 @@
     "keyfile": "str",
     "gcloudkeyfile": "str"
   },
-  "image": "homeassistant/{arch}-addon-letsencrypt"
+  "image": "hanerd/hassio-lets-encrypt:1"
 }
