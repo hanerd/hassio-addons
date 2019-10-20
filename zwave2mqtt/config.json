@@ -32,8 +32,7 @@
   "options": {
     "ssl": true,
     "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem",
-    "leave_front_door_open": true
+    "keyfile": "privkey.pem"
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
@@ -42,5 +41,5 @@
     "keyfile": "str",
     "leave_front_door_open": "bool?"
   },
-  "image": "hanerd/amd64-addon-zwave2mqtt:1.6"
+  "image": "hassioaddons/zwave2mqtt-{arch}"
 }
