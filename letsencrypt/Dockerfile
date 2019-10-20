@@ -8,6 +8,7 @@ RUN apk add --no-cache \
     && apk add --no-cache --virtual .build-dependencies \
         g++ musl-dev openssl-dev libffi-dev \
     && pip3 install --no-cache-dir certbot=="0.32.0" \
+    && pip3 install certbot-dns-google \
     && apk del .build-dependencies
 
 # Copy data
