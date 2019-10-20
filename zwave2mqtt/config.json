@@ -41,5 +41,5 @@
     "keyfile": "str",
     "leave_front_door_open": "bool?"
   },
-  "image": "hassioaddons/zwave2mqtt-{arch}"
+  "image": "hanerd/amd64-addon-zwave2mqtt:1.6"
 }
