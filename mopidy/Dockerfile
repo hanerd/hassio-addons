@@ -13,6 +13,8 @@ RUN apt-get update
 
 RUN rm -rf /var/lib/apt/lists/*
 
+RUN cat /etc/resolv.conf
+
 RUN apt install -y --no-install-recommends \
         dirmngr=2.2.12-1+deb10u1
         
