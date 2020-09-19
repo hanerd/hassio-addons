@@ -14,7 +14,9 @@ RUN apt-get update
 RUN curl https://www.google.com
 
 RUN apt-get install -y --no-install-recommends \
-        dirmngr=2.2.12-1+deb10u1 \
+        dirmngr=2.2.12-1+deb10u1
+        
+RUN apt-get install -y --no-install-recommends \
         gpg-agent=2.2.12-1+deb10u1 \
         gpg=2.2.12-1+deb10u1 \
         libnginx-mod-http-lua=1.14.2-2+deb10u3 \
