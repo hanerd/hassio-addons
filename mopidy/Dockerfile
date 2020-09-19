@@ -13,7 +13,7 @@ RUN apt-get update
 
 RUN curl https://www.google.com
 
-RUN apt-get install -y --no-install-recommends \
+RUN apt install -y --no-install-recommends \
         dirmngr=2.2.12-1+deb10u1
         
 RUN apt install -y --no-install-recommends \
