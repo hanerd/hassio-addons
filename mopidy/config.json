@@ -2,6 +2,7 @@
   "name": "Mopidy",
   "version": "dev",
   "slug": "mopidy",
+  "image": "hanerd/addon-mopidy",
   "panel_icon": "mdi:music-circle",
   "description": "Mopidy is an extensible music server",
   "url": "https://github.com/hassio-addons/addon-mopidy",
@@ -43,7 +44,6 @@
       }
     ],
     "leave_front_door_open": "bool?",
-  },
-  "image": "hanerd/mopidy",
+  }
 
 }
