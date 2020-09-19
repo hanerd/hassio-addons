@@ -7,7 +7,7 @@ FROM ${BUILD_FROM}
 
 # Copy Python requirements file
 COPY requirements.txt /tmp/
-RUN ping -c 5 www.google.com
+
 # Setup base
 RUN \
     apt-get update \
