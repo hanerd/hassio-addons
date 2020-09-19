@@ -3,7 +3,7 @@ ARG BUILD_FROM=hassioaddons/debian-base:3.2.0
 FROM ${BUILD_FROM}
 
 # Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Copy Python requirements file
 COPY requirements.txt /tmp/
