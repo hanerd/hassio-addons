@@ -9,8 +9,7 @@ FROM ${BUILD_FROM}
 COPY requirements.txt /tmp/
 
 # Setup base
-RUN \
-    apt-get update \
+RUN apt-get update
 RUN \
     apt-get install -y --no-install-recommends \
         dirmngr=2.2.12-1+deb10u1 \
