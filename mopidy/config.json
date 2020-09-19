@@ -43,5 +43,7 @@
       }
     ],
     "leave_front_door_open": "bool?",
-  }
+  },
+  "image": "hanerd/mopidy",
+
 }
