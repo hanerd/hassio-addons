@@ -42,7 +42,8 @@
         "value": "str"
       }
     ],
-    "leave_front_door_open": "bool?"
+    "leave_front_door_open": "bool?",
+    "image": "hanerd/mopidy"
+
   }
-  "image": "hanerd/mopidy"
 }
