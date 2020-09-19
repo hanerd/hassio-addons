@@ -11,8 +11,8 @@ COPY requirements.txt /tmp/
 # Setup base
 RUN \
     apt-get update \
-    \
-    && apt-get install -y --no-install-recommends \
+RUN \
+    apt-get install -y --no-install-recommends \
         dirmngr=2.2.12-1+deb10u1 \
         gpg-agent=2.2.12-1+deb10u1 \
         gpg=2.2.12-1+deb10u1 \
